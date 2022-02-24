@@ -1,9 +1,12 @@
 import React from "react";
+import Explorer from "./Explorer";
+import Badge from "./Badge";
 import styles from "./GridItem.module.css";
 
-export default function GridItem({fact, title }) {
+export default function GridItem({ id, fact, title, clicked, updateClicked }) {
     return (
-        <div className={styles.card}>
+        <div className={styles.card} onClick={() => updateClicked(id)}>
+            {clicked ? <Explorer /> : <Badge />}
             <h2 className={styles.title}>{title}</h2>
             <article className={styles.fact}>{fact}</article>
         </div>
