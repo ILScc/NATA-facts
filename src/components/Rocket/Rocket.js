@@ -1,7 +1,8 @@
-import React from 'react'
-
+import styles from "./Rocket.module.css";
 export default function Rocket() {
-  return (
-    <div>Rocket</div>
-  )
+    return (
+        <div>
+            <img src="/shuttle.png" alt="Shuttle" className={styles.rocket} />
+        </div>
+    );
 }
